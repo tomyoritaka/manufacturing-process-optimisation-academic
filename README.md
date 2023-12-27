@@ -2,7 +2,7 @@
 ## PROJECT: Defect and Cost Optimisation of a Manufacturing Process Using a Large Dataset
 #### Project Context
 
-This academic project required analysis of a large dataset containing input variables and 2 output variables - a defect variable and a cost variable - of a 4-step manufacturing process (each step has 4 input variables - Temperature, Vibration, Arc Gap and Pressure as well as the aformentioned 2 output variables.
+This academic project required analysis of a large dataset containing input variables and 2 output variables - a defect variable and a cost variable - of a 4-step manufacturing process (each step has 4 input variables - Temperature, Vibration, Arc Gap and Pressure - as well as the aformentioned 2 output variables).
 
 The CSV files are:
 - CML_2023-09-11#7-machine_params_and_cost.csv
