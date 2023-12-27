@@ -1,5 +1,5 @@
 # manufacturing-process-optimisation-academic
-## PROJECT: Defect and Cost Optimisation of a Manufacturing Process Using a Large Dataset
+## PROJECT: Defect & Cost Optimisation of a Manufacturing Process Using a Large Dataset
 #### Project Context
 
 This academic project requires analysis of a large dataset containing input variables and 2 output variables - a defect variable and a cost variable - of a new 4-step manufacturing process (each step has 4 input variables - Temperature, Vibration, Arc Gap and Pressure - as well as the aformentioned 2 output variables).
@@ -24,4 +24,4 @@ probability & cost requirements
 
 
 
-#### Analyses and Results
+#### Analyses & Results
