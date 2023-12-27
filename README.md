@@ -1,8 +1,19 @@
 # manufacturing-process-optimisation-academic
-PROJECT: Defect and Cost Optimisation of a Manufacturing Process Using a Large Dataset
+## PROJECT: Defect and Cost Optimisation of a Manufacturing Process Using a Large Dataset
 #### Project Context
 
-In the following scenario you will play the role of @ML_Lead – an expert in Machine Learning (ML) and the key (only) resource for ML and Data-science within the business. You have been sent the e-mail trail that appears on the following pages, along with some data files. Your assignment task is to respond to the requests in the e-mails with the objective of adding maximum value to the business. 
-You have to analyse the data, make sense of it, build models, draw conclusions and make predictions and report on your work.  You should also experiment with different types of model to discover which are most suited to your analysis and modelling task. 
+This academic project required analysis of a large dataset containing input variables and 2 output variables - a defect variable and a cost variable - of a 4-step manufacturing process (each step has 4 input variables - Temperature, Vibration, Arc Gap and Pressure as well as the aformentioned 2 output variables.
 
-#### Project Output
+The CSV files are:
+- CML_2023-09-11#7-machine_params_and_cost.csv
+- CML_2023-09-11#6-Ion_Diffusion_Defects.csv
+- CML_2023-09-11#5-crystalisation_Defects.csv
+- CML_2023-09-11#4-contamination_defects.csv
+- CML_2023-09-11#3-burnishing_Defects.csv
+
+The objectives are:
+1. From the existing dataset, identify the ‘optimal' set(s) of M1-M4 input variables that will meet particular defect
+probability & cost requirements
+2. Predict the defect probabilities & costs of a new set of M1-M4 input variables
+
+#### Analysis and Results
