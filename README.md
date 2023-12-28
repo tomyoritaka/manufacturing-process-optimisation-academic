@@ -4,7 +4,7 @@
 
 This academic project requires analysis of a large dataset containing 4 input variables and 2 output variables (a defect variable and a cost variable) for a new 4-step manufacturing process (each step has 4 input variables - Temperature, Vibration, Arc Gap and Pressure - as well as the aformentioned 2 output variables).
 
-The numbers of defects & the costs of production are deemed too high. The defect numbers & the costs are also volatile - and seen to be uncontrollable. The new production line is seen as a 'black box'. 
+The numbers of defects & the costs of production are deemed too high. The defects & the costs are also volatile - and seen to be uncontrollable. The new production line is seen as a 'black box'. 
 
 The owner of the manufacturing process wants to make sense of the large dataset & to control/reduce the probabilities of defects & the costs of production going forward.
 
