@@ -79,4 +79,13 @@ For each of our Gaussian Mixture Models, we move through the following steps:
 
 #### 7. Decision Trees/Classifications (Supervised ML): defects - contamination, crystallisation, ion diffusion, burnishing / m1_cost, m2_cost, m3_cost, m4_cost
 
+In the final section of our analysis, we apply basic decision trees & Random Forest Classifications to both the defect variables & the cost variables. We convert the costs into categorical variables by assigning a value of 0 if the cost is in the lowest 25th percentile (otherwise, 1). We analyse each set of input variables - M1-M4 – vis-à-vis their direct defect or cost variable (for example, the M1 input variables vs conta_d).
+
+For each decision tree/Random Forrest Classifier analysis, we move through the following steps:
+(1) Construct a basic decision tree using each set of input variables (M1-M4) & their direct defect or cost variable
+(2) ‘Prune’ the decision tree by using ‘ccp_alpha=’ to ‘correct’ for potential overfitting
+(3) Run a Random Forest Classifier using 80:20 split training & test datasets
+(4) Estimate the predicted defect probability or the probability of the cost being in the lowest 25th percentile for each set of input variables (test dataset)
+(5) Derive the classification fit using the ‘how often did we get the outcome right’ score as well as the confusion matrix & the following values: Accuracy, Misclassification Rate, False Positive Rate, Precision
+(6) Compare the performance of the Random Forest Classifier with that of the basic decision tree
 
