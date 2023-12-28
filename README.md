@@ -20,8 +20,22 @@ The objectives are:
 probability & cost requirements
 2. Predict the defect probabilities & costs of a new set of M1-M4 input variables
 
-#### Executive Summary
-
-
-
 #### Analyses & Results
+
+1. Cleaning & Merging the Data
+
+We look at the 5 data files at a high level & clean them - remedying missing data (NaNs) & 0s (where there should NOT be 0s). We then merge all data files into 1 dataset called merged_df.
+
+Part of the merge process is to create a column of 1s & 0s for each of the 4 files (contamination, crystallisation, ion diffusion, burnishing) to indicate defect (1) vs no defect (0) for all 2,000 data points. We do this by creating a new column of 1s in the file indicating a defect, merging it with merged_df & replacing the NaNs with 0s.
+
+2. Reviewing the Data Visually (Scanning the Data)
+
+Now that we have a cleaned-and-merged dataset, we review & gain a ‘bird’s eye view’ of the data. We review each set of input variables (M1-M4) & ALL current/later-step defect/cost variables (we include later-step outcome variables for M1, M2 & M3 each since we may find a cross-step correlation such as the M1 input variables predicting the ion diffusion defect) in a scatter matrix & a heat map.
+
+3. Linear/Polynomial Regressions (Supervised ML): m1_cost, m2_cost, m3_cost, m4_cost
+
+
+
+4. 
+
+
