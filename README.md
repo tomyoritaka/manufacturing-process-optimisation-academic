@@ -20,7 +20,7 @@ The objectives are:
 probability & cost requirements
 2. Predict the defect probabilities & costs of a new set of M1-M4 input variables
 
-#### Analyses & Results
+#### Analyses
 
 1. Cleaning & Merging the Data
 
@@ -34,8 +34,24 @@ Now that we have a cleaned-and-merged dataset, we review & gain a ‘bird’s ey
 
 3. Linear/Polynomial Regressions (Supervised ML): m1_cost, m2_cost, m3_cost, m4_cost
 
+Multivariate Regressions
 
+We apply a linear regression to each set of M1-M4 input variables – and further apply 2nd/3rd-degree polynomial regressions if/where the linear regression appears to show a meaningful correlation. The outcome variables are the cost variables (m1_cost, m2_cost, m3_cost, m4_cost). For each set of input variables from M1 to M4, we attempt to identify correlations vis-à-vis the direct cost variable (for example, the M1 input variables vs m1_cost) as well as any later-step cost variable (for example, the M1 input variables vs m2_cost, m3_cost or m4_cost).
 
-4. 
+For each of our multivariate linear & 2nd/3rd-degree polynomial regressions, we move through the following steps:
+(1) Run the regression using 80:20 split training & test datasets
+(2) Derive the regression fit using R2 & RMSE
+
+In addition, for each of the multivariate 2nd-degree polynomial regressions, we:
+(3) Attempt to find the minimum/optimum point provided that the regression fit is sufficiently strong
+(4) Apply ridge regularisation to ‘correct’ for overfitting (where necessary)
+
+Single-Input-Variable Regressions
+
+Using linear & 2nd/3rd-degree polynomial regressions (following the steps described above), we analyse the 3 (potential) single-input-variable correlations identified from the heat map: B1 vs m1_cost, B3 vs m3_cost, T3 vs m3_cost. In addition, we analyse each input variable vis-à-vis its direct cost variable in the same step of the process but only after segregating the input variable data into 2 clusters based on visual reviews of scatter plots.
+
+4. Logistic Regressions (Supervised ML): defects - contamination, crystallisation, ion diffusion, burnishing
+
+5. 
 
 
