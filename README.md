@@ -52,6 +52,31 @@ Using linear & 2nd/3rd-degree polynomial regressions (following the steps descri
 
 4. Logistic Regressions (Supervised ML): defects - contamination, crystallisation, ion diffusion, burnishing
 
-5. 
+We now turn our attention to the defect variables (conta_d, crys_d, i_diff_d, burn_d) – each as the outcome variable of a multivariate logistic regression. As in the previous section, for each set of M1-M4 input variables, we attempt to identify correlations vis-à-vis the direct defect variable as well as any later-step defect variable. 
+
+For each of our multivariate logistic regressions, we move through the following steps: 
+(1) Run the regression using 80:20 split training & test datasets
+(2) Estimate the predicted defect probability of each set of input variables (test dataset)
+(3) Derive the regression fit using the ‘how often did we get the outcome right’ score as well as the confusion matrix & the following values: Accuracy, Misclassification Rate, False Positive Rate, Precision
+
+5. Clustering (Unsupervised ML): m1_cost, m2_cost, m3_cost, m4_cost
+
+We apply clustering to identify & segregate distinct sets of data points & apply algorithms/models accordingly in the hope of teasing out stronger correlations and/or identifying lower-cost clusters.  We analyse each set of M1-M4 input variables vis-à-vis their direct cost variable (for example, the M1 input variables vs m1_cost), but not any of the cross-step variables. 
+
+For each of our clustering analyses, we move through the following steps:
+(1)	Determine the number of clusters (k) via the silhouette method or the elbow method; in our analysis, we use k=2
+(2)	Cluster the data assuming k clusters & using K-means
+(3) Plot the clustering result for each input variable/cost variable pair & review visually to identify meaningful clusters
+
+6. Gaussian Mixture Models: m1_cost, m2_cost, m3_cost, m4_cost
+
+We next turn our attention to Gaussian Mixture Models in the hope of identifying more than 1 sub-distribution of m1_cost, m2_cost, m3_cost and/or m4_cost.
+
+For each of our Gaussian Mixture Models, we move through the following steps:
+(1) Assume the number of sub-distributions; for our analysis, we assume 2 sub-distributions given the results of our initial scatter plots & the subsequent clustering analyses
+(2) Apply a Gaussian Mixture Model to the cost data & derive the estimated means/other related statistics
+(3) Compare the 2 sub-distributions in a histogram as well as the 2 means – and determine if 2 sub-distributions exist for each cost variable
+
+7. Decision Trees/Classifications (Supervised ML): defects - contamination, crystallisation, ion diffusion, burnishing / m1_cost, m2_cost, m3_cost, m4_cost
 
 
